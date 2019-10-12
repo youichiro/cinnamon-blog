@@ -1,5 +1,5 @@
 ---
 templateKey: index-page
 title: Cinnamon Blog
-image: /img/dsc04870.jpg
+image: /img/DSC048702.jpg
 ---
