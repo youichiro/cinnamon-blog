@@ -41,7 +41,7 @@ const styles = {
   },
   naviItem: {
     width: 100,
-    textAlign: 'right'
+    textAlign: 'center'
   },
   linkText: {
     color: '#2b2523'
