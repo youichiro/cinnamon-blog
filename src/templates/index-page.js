@@ -41,21 +41,19 @@ export const IndexPageTemplate = ({
         </h1>
       </div>
     </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="column is-12">
-                  <BlogRoll />
-                </div>
+    <div className="container">
+      <div className="section">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="content">
+              <div className="column is-12">
+                <BlogRoll />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 )
 
