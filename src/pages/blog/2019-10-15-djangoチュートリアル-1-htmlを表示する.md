@@ -64,12 +64,12 @@ $ django-admin startproject mysite
 
 ```
 mysite/
-  - manage.py
-  - mysite/
-    - __init__.py
-    - settings.py
-    - urls.py
-    - wsgi.py
+    - manage.py
+    - mysite/
+        - __init__.py
+        - settings.py
+        - urls.py
+        - wsgi.py
 ```
 
 プロジェクトディレクトリに移動し，サーバーを起動してブラウザで表示してみましょう．
@@ -99,24 +99,22 @@ $ python manage.py startapp memo_app
 
 ```
 mysite/
-  - manage.py
-  - mysite/
-  - memo_app/
-    - __init__.py
-    - admin.py
-    - apps.py
-    - migrations/
-      - __init__.py
-    - models.py
-    - tests.py
-    - views.py
+    - manage.py
+    - mysite/
+    - memo_app/
+        - __init__.py
+        - admin.py
+        - apps.py
+        - migrations/
+            - __init__.py
+        - models.py
+        - tests.py
+        - views.py
 ```
 
 プロジェクトの設定ファイルである`mysite/settings.py`に`memo_app`アプリケーションを追記します．アプリケーションを作成したら必ずこれをしてください．
 
-```python
-# mysite/settings.py
-
+```python:title=mysite/settings.py
 ...
 
 INSTALLED_APPS = [
@@ -148,8 +146,7 @@ $ mkdir memo_app/templates
 
 その下に`index.html`を作成し，Hello Worldを表示するためのHTMLを書きます．
 
-```html
-<!-- memo_app/templates/index.html -->
+```html:title=memo_app/templates/index.html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -164,8 +161,7 @@ $ mkdir memo_app/templates
 
 `memo_app/views.py`を編集します．
 
-```python
-# memo_app/views.py
+```python:title=memo_app/views.py
 from django.shortcuts import render
 
 def index(request):
@@ -174,8 +170,7 @@ def index(request):
 
 `memo_app/urls.py`を作成し，URLを定義します．
 
-```python
-# memo_app/urls.py
+```python:title=memo_app/urls.py
 from django.urls import path
 from . import views
 
@@ -189,8 +184,7 @@ path関数の第1引数でurlを指定し，第2引数でそのurlに対応す�
 
 プロジェクト全体のURLの設定ファイルである`mysite/urls.py`に`memo_app/urls.py`を追加します．
 
-```python
-# mysite/urls.py
+```python:title=mysite/urls.py
 from django.contrib import admin
 from django.urls import path, include
 
@@ -213,8 +207,7 @@ $ python manage.py runserver
 ## HTMLに変数を渡す
 `memo_app/views.py`を以下のように変更してみましょう．
 
-```python
-# memo_app/views.py
+```python:title=memo_app/views.py
 from django.shortcuts import render
 
 def index(request):
@@ -224,9 +217,7 @@ def index(request):
 render関数の第3引数に指定した辞書をテンプレートに渡すことができます．
 テンプレートでは`{{ text }}`のようにカギ括弧×2で渡された変数を囲むことでその値を表示することができます．
 
-```html
-<!-- memo_app/templates/index.html -->
-
+```html:title=memo_app/templates/index.html
 ...
 
 <body>
