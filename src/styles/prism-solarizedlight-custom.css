@@ -120,3 +120,10 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+code.language-text:not(pre code) {
+  color: tomato;
+  background: #f2f2f2;
+  padding: 3px 9px;
+  margin: 0 3px;
+}

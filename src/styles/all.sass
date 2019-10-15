@@ -1,7 +1,10 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import "~bulma"
 
 // Config vars
-$mycolor: #566b78
+$base-color: #566b78
+$font-color: #111111
+$post-h2-color: #364e96
 
 .content .taglist
   list-style: none
@@ -17,20 +20,6 @@ $mycolor: #566b78
     padding: 0 2rem 1rem 0
     margin-bottom: 1.5rem
     margin-top: 0
-
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
 
 .full-width-image
     width: 100vw
@@ -62,22 +51,37 @@ footer.footer
   width: 100px
   text-align: center
 .footer-text
-  color: $mycolor
+  color: $base-color
 
 // blog roll
 .blog-list-item header
   display: flex
 .blog-list-item .title
   font-size: 20px
-  color: $mycolor
+  color: $base-color
 .blog-list-item .date
   font-size: 12px
-  color: $mycolor
+  color: $base-color
 .blog-list-item:hover
-  background-color: $mycolor
+  background-color: $base-color
   .title
     color: white
   .date
     color: white
 
-@import "~bulma"
+// blog post
+.Post
+  img
+    display: block
+    margin: 0 auto
+    padding: 20px
+  p
+    color: $font-color
+  h2
+    color: $post-h2-color
+    padding: 0.5em 0
+    border-top: solid 3px $post-h2-color
+    border-bottom: solid 3px $post-h2-color
+  .description
+    padding-top: 1.5em
+    padding-bottom: 1.5em
