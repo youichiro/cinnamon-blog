@@ -21,15 +21,24 @@ $post-h2-color: #364e96
     margin-bottom: 1.5rem
     margin-top: 0
 
-.full-width-image
-    width: 100vw
-    height: 100vh
-    max-height: 70vh
-    background-size: cover
-    background-position: center
-    display: flex
-    justify-content: center
-    align-items: center
+.top-image
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 17%
+  background-color: gray
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  &__title
+    background-color: rgba(0, 0, 0, 0.7)
+    color: white
+    line-height: 1
+    padding: 0.5em 1em
+    text-align: center
+    font-size: calc( 16px + 3vw )
+    font-weight: bold
+
 
 .margin-top-0
   margin-top: 0 !important
@@ -52,12 +61,17 @@ footer.footer
   text-align: center
 .footer-text
   color: $base-color
+  font-size: calc( 12px + 0.3vw )
 
 // blog roll
+.blog-roll-section
+  margin: calc(2px + 3vh) 10px
+  @media only screen and (min-width: 1200px)
+    padding-top: 30px
 .blog-list-item header
   display: flex
 .blog-list-item .title
-  font-size: 20px
+  font-size: calc( 12px + 0.5vw )
   color: $base-color
 .blog-list-item .date
   font-size: 12px

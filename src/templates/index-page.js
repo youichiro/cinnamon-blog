@@ -11,38 +11,17 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
+      className="top-image"
+      style={{ backgroundImage: `url(${
+        !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+        })`
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.5em',
-          }}
-        >
-          {title}
-        </h1>
-      </div>
+      <h1 className="top-image__title">{title}</h1>
     </div>
+
     <div className="container">
-      <div className="section">
+      <div className="blog-roll-section">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
