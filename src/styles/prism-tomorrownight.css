@@ -47,8 +47,9 @@ pre[class*="language-"] {
 	padding: 0.1em 0.5em;
 	border-radius: .2em;
 	white-space: normal;
-	background: none;
+	background: #EEEEEE;
 	color: tomato;
+	font-size: 0.9em;
 }
 
 .token.comment,
